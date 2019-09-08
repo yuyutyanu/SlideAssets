@@ -9,11 +9,7 @@ export const allPost = gql`
     content
     description
     thumbnail{
-      status
-      fileName
       url
-      createdAt
-      updatedAt
     }
   }
 }
