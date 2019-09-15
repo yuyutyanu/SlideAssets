@@ -1,0 +1,31 @@
+.toSlide:first-child{
+  margin-top:50px;
+}
+.toSlide{
+  width:500px;
+  margin:0 auto 50px auto;
+  text-align: center;
+  border-radius:4px;
+  background: #f9c300;
+  border:solid 10px #ff9f1a;
+  color:#fff;
+  padding:10px;
+  transition: all 0.3s ease;
+}
+.toSlide:hover{
+  transform: scale(1.1);
+}
+
+.toSlide .slide-title{
+  font-weight:bold;
+  font-size:20px;
+}
+
+.toSlide .slide-thumbnail-wrapper{
+
+}
+.toSlide img{
+  width:100%;
+  height:200px;
+  object-fit: cover;
+}
