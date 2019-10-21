@@ -7,7 +7,7 @@ import './assets/index.css'
 
 import * as serviceWorker from './serviceWorker';
 import { CMS_URL } from './config'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AppSlide from './container/AppSlide'
 
 const client = new ApolloClient({
@@ -18,9 +18,11 @@ ReactDOM.render(
   <Router>
     <ApolloProvider client={client}>
       <div className="container">
-        <Presentation/>
+        <Switch>
+          <Route exact path="/" component={Presentation}></Route>
+          <Route exact path="/slide/:title" component={AppSlide}/>
+        </Switch>
       </div>
-    <Route path="/slide/:title"  component={AppSlide}/>
     </ApolloProvider>
   </Router>,
   document.getElementById('root')
